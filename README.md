@@ -1,6 +1,6 @@
 <div align="center">
 
-# Training-free Detection of Generated Videos<br>via Spatial-Temporal Likelihoods
+# Frequency-Enhanced STALL for Training-Free Detection of AI-Generated Videos
 
 **CVPR 2026**
 
@@ -54,8 +54,8 @@ Each branch score is converted to a percentile against a [VATEX](https://arxiv.o
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/OmerBenHayun/STALL.git
-cd STALL
+git clone https://github.com/jyothsnabondhu/STALL-Frequency-Enhanced.git
+cd STALL-Frequency-Enhanced
 ```
 
 ### 2. Create the environment
@@ -476,6 +476,16 @@ python src/eval.py --hf-dataset OmerXYZ/comgenvid --params precomputed/my_params
 </details>
 
 ---
+## Experimental Results
+
+The frequency-enhanced version was evaluated against the original STALL model on a balanced 60-video validation subset of ComGenVid containing 20 real MSVD videos, 20 fake Sora videos, and 20 fake VEO3 videos.
+
+| Model | Videos | AP | ROC-AUC |
+|---|---:|---:|---:|
+| Original STALL | 60 | 0.954385 | 0.960000 |
+| STALL + Frequency | 60 | 0.888204 | 0.918750 |
+
+The frequency-domain branch was introduced as an experimental extension using FFT-based features and three-branch score fusion. On this validation subset, the equal-weight frequency fusion resulted in lower AP and ROC-AUC than the original STALL model. These results are specific to the selected 60-video validation subset and should not be interpreted as a general performance claim.
 
 <a name="citation"></a>
 
