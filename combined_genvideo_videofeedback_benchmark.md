@@ -1,0 +1,39 @@
+# Combined STALL Benchmark: GenVideo and VideoFeedback
+
+**Note:** GenVideo uses 80/10/10 weighting; VideoFeedback uses 10/80/10 weighting. Generator-wise averages are unweighted macro averages.
+
+## Generator-wise results
+
+| Dataset       | Generator       |   Real videos |   Fake videos |   Original ROC-AUC |   Original AP |   Modified ROC-AUC |   Modified AP |   AUC change |   AP change | Weighting                                  |
+|:--------------|:----------------|--------------:|--------------:|-------------------:|--------------:|-------------------:|--------------:|-------------:|------------:|:-------------------------------------------|
+| GenVideo      | Crafter         |           150 |            27 |             0.8593 |        0.972  |             0.9481 |        0.9908 |       0.0888 |      0.0188 | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | Gen2            |           150 |            27 |             0.9442 |        0.9891 |             0.9444 |        0.9897 |       0.0002 |      0.0006 | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | HotShot         |           150 |            14 |             0.8757 |        0.985  |             0.939  |        0.994  |       0.0633 |      0.009  | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | LaVie           |           150 |            19 |             0.9211 |        0.9885 |             0.874  |        0.9819 |      -0.0471 |     -0.0066 | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | ModelScope      |           150 |            13 |             0.6487 |        0.9484 |             0.7636 |        0.9714 |       0.1149 |      0.023  | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | MoonValley      |           150 |             8 |             0.9042 |        0.994  |             0.9508 |        0.9973 |       0.0466 |      0.0033 | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | MorphStudio     |           150 |            11 |             0.877  |        0.9896 |             0.8661 |        0.9893 |      -0.0109 |     -0.0003 | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | Show_1          |           150 |            15 |             0.7649 |        0.9674 |             0.7973 |        0.9747 |       0.0324 |      0.0073 | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | Sora            |           150 |             1 |             0.84   |        0.9989 |             0.94   |        0.9996 |       0.1    |      0.0007 | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | WildScrape      |           150 |            15 |             0.8182 |        0.9665 |             0.8502 |        0.9721 |       0.032  |      0.0056 | Spatial 80% / Temporal 10% / Frequency 10% |
+| GenVideo      | MACRO AVERAGE   |               |               |             0.8453 |        0.9799 |             0.8873 |        0.9861 |       0.042  |      0.0061 | Spatial 80% / Temporal 10% / Frequency 10% |
+| VideoFeedback | AnimateDiff     |            22 |             2 |             0.9318 |        0.9938 |             0.8636 |        0.9866 |      -0.0682 |     -0.0072 | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | Fast-SVD        |            22 |             2 |             0.9318 |        0.9938 |             0.9773 |        0.998  |       0.0455 |      0.0042 | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | LVDM            |            22 |             2 |             0.8864 |        0.9901 |             1      |        1      |       0.1136 |      0.0099 | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | LaVie-base      |            22 |             2 |             0.8636 |        0.9881 |             0.9773 |        0.998  |       0.1137 |      0.0099 | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | ModelScope      |            22 |             2 |             0.7045 |        0.9691 |             0.9773 |        0.998  |       0.2728 |      0.0289 | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | Pika            |            22 |             2 |             0.9091 |        0.9923 |             1      |        1      |       0.0909 |      0.0077 | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | SoRA-Clip       |            22 |             2 |             0.5682 |        0.9379 |             0.75   |        0.9767 |       0.1818 |      0.0388 | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | Text2Video-Zero |            22 |             2 |             0.7273 |        0.9675 |             0.8636 |        0.9866 |       0.1363 |      0.0191 | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | VideoCrafter2   |            22 |             2 |             0.9545 |        0.996  |             0.9545 |        0.996  |       0      |      0      | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | ZeroScope-576w  |            22 |             2 |             0.8636 |        0.9881 |             1      |        1      |       0.1364 |      0.0119 | Spatial 10% / Temporal 80% / Frequency 10% |
+| VideoFeedback | MACRO AVERAGE   |               |               |             0.8341 |        0.9817 |             0.9364 |        0.994  |       0.1023 |      0.0123 | Spatial 10% / Temporal 80% / Frequency 10% |
+
+## Overall dataset results
+
+| Dataset               |   Evaluation videos |   Original ROC-AUC |   Modified ROC-AUC |   AUC change | Weighting                                  |
+|:----------------------|--------------------:|-------------------:|-------------------:|-------------:|:-------------------------------------------|
+| GenVideo              |                 300 |             0.8557 |             0.8904 |       0.0347 | Spatial 80% / Temporal 10% / Frequency 10% |
+| VideoFeedback (pilot) |                  42 |             0.8341 |             0.9364 |       0.1023 | Spatial 10% / Temporal 80% / Frequency 10% |
+
+**Metric note:** Confirm AP positive-class and score-direction consistency across datasets before treating AP values as directly comparable. VideoFeedback is a 42-video pilot.
