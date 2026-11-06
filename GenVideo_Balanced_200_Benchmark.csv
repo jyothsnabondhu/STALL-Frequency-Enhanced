@@ -1,0 +1,12 @@
+Dataset,Generator,Real videos,Fake videos,Original ROC-AUC,Original AP,Modified ROC-AUC,Modified AP,AUC change,AP change,Weighting
+GenVideo,Crafter,150,5,0.8853,0.9956,0.9320,0.9977,0.0467,0.0021,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,Gen2,150,5,0.9853,0.9995,0.9360,0.9978,-0.0493,-0.0017,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,HotShot,150,5,0.9067,0.9965,0.9347,0.9977,0.0280,0.0012,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,LaVie,150,5,0.9373,0.9976,0.8747,0.9956,-0.0626,-0.0020,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,ModelScope,150,5,0.8267,0.9936,0.8427,0.9941,0.0160,0.0005,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,MoonValley,150,5,0.7787,0.9912,0.9093,0.9969,0.1306,0.0057,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,MorphStudio,150,5,0.8013,0.9921,0.7653,0.9906,-0.0360,-0.0015,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,Show_1,150,5,0.9640,0.9988,0.9147,0.9971,-0.0493,-0.0017,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,Sora,150,5,0.7560,0.9903,0.7547,0.9901,-0.0013,-0.0002,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,WildScrape,150,5,0.6787,0.9745,0.7333,0.9787,0.0546,0.0042,Spatial 80% / Temporal 10% / Frequency 10%
+GenVideo,MACRO AVERAGE,,,0.8520,0.9930,0.8597,0.9936,0.0077,0.0007,Spatial 80% / Temporal 10% / Frequency 10%
